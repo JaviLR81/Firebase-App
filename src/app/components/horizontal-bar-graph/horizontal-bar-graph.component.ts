@@ -5,11 +5,46 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './horizontal-bar-graph.component.html',
   styleUrls: ['./horizontal-bar-graph.component.css']
 })
-export class HorizontalBarGraphComponent implements OnInit {
+export class HorizontalBarGraphComponent  {
 
-  constructor() { }
+  results: any[] = [
+      {
+        "name": "Game 1",
+        "value": 8940000
+      },
+      {
+        "name": "Game 2",
+        "value": 5000000
+      },
+      {
+        "name": "Game 3",
+        "value": 7200000
+      },
+      {
+        "name": "Game 4",
+        "value": 433000
+      }
+  ];
 
-  ngOnInit(): void {
+
+
+  // options
+  showXAxis = true;
+  showYAxis = true;
+  gradient = true;
+  showLegend = true;
+  showXAxisLabel = true;
+  xAxisLabel = 'Games';
+  showYAxisLabel = true;
+  yAxisLabel = 'Population';
+
+  colorScheme = 'nightLights';
+
+  constructor() {}
+
+  onSelect(event: any) {
+    console.log(event);
   }
+
 
 }
